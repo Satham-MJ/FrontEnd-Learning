@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Rubik", sans-serif;
+}
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e8e5e480;
+  border-radius: 25px;
+  z-index: 999;
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+nav ul {
+  display: flex;
+  /* gap: 5px; */
+  list-style: none;
+  padding: 12px 5px;
+}
+nav ul li a {
+  color: black;
+  font-size: 15px;
+  padding: 10px 25px;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background: white;
+  border-radius: 25px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content-section {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  align-items: center;
+}
+.hero h1 {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 500;
+}
+.pills {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+}
+.pills span {
+  padding: 8px 10px;
+}
+.pills span:not(:first-child) {
+  background-color: #e8e5e480;
+  border-radius: 25px;
+}
+.designs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.design {
+  border-radius: 8px;
+  position: relative;
+}
+.overlay {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(7.5px);
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(7.5px);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 3px;
+  display: none;
+  transition: 0.3s;
+}
+.design:hover .overlay {
+  display: block;
+}
+.overlay h6 {
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+}
+.overlay:hover button {
+  animation-name: example;
+  animation-duration: 2s;
+}
+@keyframes example {
+  from {
+    top: 35px;
+    right: 35px;
+  }
+  to {
+    top: 10px;
+    right: 10px;
+  }
+}
+.overlay button {
+  background: none;
+  border: none;
+  padding: 14px;
+  background: white;
+  border-radius: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.overlay button i {
+  font-size: 16px;
+  font-weight: normal;
+  transform: rotate(-45deg);
+}
+.design img {
+  width: 100%;
+  border-radius: 12px;
+}
+.shop-button {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom-sections h2 {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+}
+.text-gray {
+  color: #7f7f7f;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+footer p {
+  font-size: 14px;
+}
+footer ul {
+  display: flex;
+  gap: 14px;
+  list-style: none;
+}
+footer ul li a {
+  color: black;
+  font-size: 12px;
+}
